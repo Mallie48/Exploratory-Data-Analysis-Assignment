@@ -31,7 +31,7 @@ years<- unique(NEI$year)
 types<- unique (NEI$tyear)
 str(NEI)
 
-# Calculate total emission by year in the U.S.:
+### Calculate total emission by year in the U.S.:
 tot_emi_year<- tapply(NEI$Emissions, NEI$year, sum)
 tot_emi_year
 1999    2002    2005    2008 
