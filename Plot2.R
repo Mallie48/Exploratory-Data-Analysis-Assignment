@@ -19,3 +19,4 @@ tot_Baltimore_year
 plot(tot_Baltimore_year, type=”l”, xaxt=”n”, xlab=”Year”, ylab=”Total Emission”, main=”Total Emission in the Baltimore”)
 axis(side=1, labels=as.character(years), at =1:length(years))
 
+## The total emission for Baltimore City has been decreased from 1999 to 2008.
