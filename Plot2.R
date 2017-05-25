@@ -1,5 +1,14 @@
 
-# Calculating total emissions of Baltimore city (fips=24510) by year:
+## Change the directory in R to the folder that zip file is stored.
+# Read each file using readRDS() function in R:
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+
+# Load the packages used in the exploratory analysis:
+library(ggplot2)
+library(dplyr)
+
+# Calculate total emissions of Baltimore city (fips=24510) by year:
 Baltimore_emi<- NEI[NEI$fips=="24510",]
 tot_Baltimore_year<- tapply(Baltimore_emi$Emissions, Baltimore_emi$year,sum)
 tot_Baltimore_year
