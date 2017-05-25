@@ -1,5 +1,14 @@
 
-## Calculating the total emission in Baltimore by year and type:
+## Change the directory in R to the folder that zip file is stored.
+# Read each file using readRDS() function in R:
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+
+# Load the packages used in the exploratory analysis:
+library(ggplot2)
+library(dplyr)
+
+# Calculating the total emission in Baltimore by year and type:
 >tot_Baltimore_type<- with(Baltimore_emi, tapply(Emission, list(type, year), sum))
 >tot_Baltimore_type
             1999      2002      2005       2008
